@@ -1,0 +1,33 @@
+aside{
+    margin: auto;
+    padding-top: 100px;
+}
+.card{
+    background-color: rgba(244, 0, 0, 0.5);
+    margin-top: -60px;
+    width: 450px;
+}
+
+.btn{
+    color: black;  
+    font-weight: bold;
+}
+hr{
+    background-color: white;
+}
+h4{
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 25px;
+}
+p{
+    margin-top: 5px;
+    float: right;
+    font: italic small-caps bold 16px/2 cursive;
+}
+a{
+    color: white;
+    font-weight: bolder;
+}
+.input-group-text{
+    color: black;
+}

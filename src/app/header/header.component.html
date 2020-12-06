@@ -1,0 +1,21 @@
+<nav class='navbar navbar-inverse'>
+    <a routerLink='/about'><div class='logo'>F A M</div></a>
+    <div>
+      <ul class='nav navbar proba'>
+        <li><a routerLink='/accounts' class='hoverable'>Accounts</a></li>
+        <li><a routerLink='/transactions' class='hoverable'>Transactions</a></li>
+        <li><a routerLink='/savingsEdit' class='hoverable'>Savings</a></li>
+        <li><a routerLink='/works' class='hoverable'>Works</a></li>
+        <li><a routerLink='/contact' class='hoverable'>Contact</a></li>
+      </ul>
+      <ul class='nav navbar mb-3 float-sm-right logout'>
+        <li>
+          <a routerLink='/user' class='hoverable'><i class='fas fa-user mr-1'></i> <span
+              class='clearfix d-none d-sm-inline-block'>View Profile</span></a>
+        </li>
+        <li>
+          <a class='hoverable' (click)='Logout()'><i class='fas fa-sign-out-alt'></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

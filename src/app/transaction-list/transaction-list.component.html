@@ -1,0 +1,36 @@
+<div class='row itemsBlock'>
+    <div class='col-md-4 col-sm-6 col-12' *ngFor='let transaction of transactions'>
+        <div>
+            <div class='image-flip'>
+                <div class='mainflip flip-0'>
+                    <div class='frontside'>
+                        <div class='card'>
+                            <div class='card-body text-center'>
+                                <img class='rounded-circle z-depth-2' alt='100x100' src='../../assets/images/logo.jpg'
+                                    data-holder-rendered='true' />
+
+                                <h4 class='card-title'>Amount : {{ transaction.amount }}</h4>
+                                <a href='https://www.fiverr.com/share/qb8D02' class='btn btn-primary btn-sm'><i
+                                        class='fa fa-plus'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='backside'>
+                        <div class='card'>
+                            <div class='card-body text-center mt-4'>
+                                <a routerLink='/transaction/edit/{{ transaction.id }}'>
+                                    <h4 class='card-title'>Description : {{ transaction.description }}</h4>
+                                </a>
+                                <p class='card-text'>
+                                    Amount : {{ transaction.amount }}
+                                </p>
+                                <p class='card-text my-2'>Date : {{ transaction.date }} </p>
+                                <p class='card-text mt-4'>Type : {{ transaction.tr_transaction }} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

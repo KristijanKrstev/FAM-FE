@@ -1,0 +1,54 @@
+<div class='page-wrapper p-t-100 p-b-50'>
+    <div class='wrapper wrapper--w900'>
+        <div class='card card-6'>
+            <div class='card-heading'>
+                <h2 class='title'>Update your working place</h2>
+            </div>
+            <div class='card-body'>
+                <form method='POST'>
+                    <div class='form-row'>
+                        <div class='name'>Name of company</div>
+                        <div class='value'>
+                            <input class='input--style-6' type='text'  name='name' [(ngModel)]='work.name'
+                                placeholder="Working place name">
+                        </div>
+                    </div>
+                    <div class='form-row'>
+                    <div class='name'>Address</div>
+                    <div class='value'>
+                        <div class='input-group'>
+                            <input class='input--style-6' type='text'  name='address' [(ngModel)]='work.address'
+                                placeholder='address...'>
+                        </div>
+                    </div>
+                    </div>
+                    <div class='form-row'>
+                        <div class='name'>Description</div>
+                        <div class='value'>
+                            <div class='input-group'>
+                                <input class='input--style-6' type='text'  name='description' [(ngModel)]='work.description'
+                                    placeholder='description...'>
+                            </div>
+                        </div>
+                        </div>
+                    <div class='form-row'>
+                        <div class='name'>Number</div>
+                        <div class='value'>
+                            <div class='input-group'>
+                                <input class='input--style-6' type='number'  name='number' [(ngModel)]='work.number'
+                                    placeholder='Phone number...'> 
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class='card-footer'>
+                <button class='btn btn-primary' type='submit' (click)='onSubmit()'>Update Working Place</button>
+                <small  *ngIf='errors' class='text-danger ml-4'>Fill in all the fields</small>
+                <button class='btn btn-primary float-right ml-3' type='submit' (click)='goBack()'>Cancel</button>
+                <button class='btn btn-danger float-right' type='submit'
+                    (click)='delete(work.id)'>Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

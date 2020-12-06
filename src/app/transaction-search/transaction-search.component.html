@@ -1,0 +1,13 @@
+<a routerLink='/transaction/create' title='Add Transaction'>
+  <img src='../../assets/images/Nuvola_Red_Plus.svg.png'>
+</a>
+<section id='team' class='pb-5'>
+    <div class='container'>
+      <form class='form-inline my-2 my-lg-0'>
+        <input #searchbox class='form-control my-3' type='search' placeholder='Search' aria-label='Search'
+        (input)='search(searchbox.value)'
+         />
+      </form>
+  <transaction-list [transactions]='transactions$ | async'></transaction-list>
+    </div>
+  </section>  

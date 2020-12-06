@@ -1,0 +1,33 @@
+<aside class="col-sm-4">
+    <div class="card">
+        <article class="card-body">
+            <h4 class="card-title text-center mt-1">Sign in</h4>
+            <form (ngSubmit)='onSubmit()' #loginForm='ngForm' *ngIf='!showForgotPassword'>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fas fa-at"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Email" type="email" [(ngModel)]='model.email' name='email' ngModel [email]='true'> 
+                    </div> 
+                </div> 
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control validate" placeholder="Password" type="password" [(ngModel)]='model.password' name='password' #Password='ngModel' required>
+                    </div> 
+                </div>
+                <div class="form-group">
+                    <button [disabled]='!loginForm.valid' type="submit" class="btn bg-danger btn-block" name='button'>Login</button>
+                </div>
+                <p *ngIf='showErrorMessage' id='passwordHelp' class='text-danger'>
+                    Invalid username and password
+                </p>
+                <hr>
+                <a routerLink="/register"><p class="singUp">Don't have account? Sign up</p></a>
+            </form>
+        </article>
+    </div>
+</aside>

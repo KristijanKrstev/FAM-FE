@@ -1,0 +1,48 @@
+<div class='container h-100 mt-4'>
+  <div class='d-flex justify-content-center h-100'>
+    <div class='user_card'>
+      <div class='d-flex justify-content-center'>
+        <div class='brand_logo_container my-4'>
+          <img src='../../assets/images/logo2.jpg' class='brand_logo' alt='Logo' />
+        </div>
+      </div>
+      <div class='d-flex justify-content-center form_container'>
+        <form (ngSubmit)='onSubmit()' #RegisterForm='ngForm'>
+          <div class='input-group mb-3'>
+            <div class='input-group-append'>
+              <span class='input-group-text'><i class='fas fa-heading icon_reg'></i></span>
+            </div>
+            <input type='text' class='form-control' placeholder='Name' [(ngModel)]='model.name' name='name' required />
+          </div>
+
+          <div class='input-group mb-3'>
+            <div class='input-group-append'>
+              <span class='input-group-text'><i class='far fa-envelope icon_reg'></i></span>
+            </div>
+            <input type='email' class='form-control' placeholder='Email' name='email' [(ngModel)]='model.email'
+              required>
+          </div>
+          <div class='input-group mb-3'>
+            <div class='input-group-append'>
+              <span class='input-group-text'><i class='fas fa-city icon_reg'></i></span>
+            </div>
+            <input type='date' class='form-control input_user' placeholder='Date' [(ngModel)]='model.dateOfBirth'
+              name="dateOfBirth" required />
+          </div>
+          <div class='d-flex justify-content-center mt-3 login_container'>
+            <button type='submit' name='button' class='btn register_btn'>
+              Update Info
+            </button>
+          </div>
+          <button (click)='delete(model.id)' type='submit' name='button' class='btn btn-light mt-3'>
+            Delete account
+          </button>
+          <div class='d-flex justify-content-center mt-3 login_container'>
+          <a routerLink='password/{{ model.id }}'>Change your password</a>
+          </div>
+          <div *ngIf='error' class='text-danger d-flex justify-content-center mt-3'>Please try again!</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

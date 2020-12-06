@@ -1,0 +1,50 @@
+<div class='page-wrapper p-t-100 p-b-50'>
+    <div class='wrapper wrapper--w900'>
+        <div class='card card-6'>
+            <div class='card-heading'>
+                <h2 class='title'>Create your account</h2>
+            </div>
+            <div class='card-body'>
+                <form method='POST'>
+                    <div class='form-row'>
+                        <div class='name'>Account name</div>
+                        <div class='value'>
+                            <input class='input--style-6' type='text' [(ngModel)]='account.name' name='name' placeholder='John B.'>
+                        </div>
+                    </div>
+                    <div class='form-row'>
+                    <div class='name'>Type</div>
+                    <div class='value'>
+                    <select class="browser-default custom-select input--style-6" [(ngModel)]='account.type' name="type">
+                        <option selected>Select one type</option>
+                        <option value="Credit card">Credit card</option>
+                        <option value="Cash">Cash</option>
+                    </select>
+                    </div>
+                    </div>
+                    <div class='form-row'>
+                        <div class='name'>Currency</div>
+                        <div class='value'>
+                            <div class='input-group'>
+                                <input class='input--style-6' type='text'  name='currency' [(ngModel)]='account.currency' placeholder='USD | EUR ...'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-row'>
+                        <div class='name'>Initial Balance</div>
+                        <div class='value'>
+                            <div class='input-group'>
+                                <input class='input--style-6' type='number'  name='initialbalance' [(ngModel)]='account.initialBalance' placeholder='50...'>
+                            </div>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+            <div class='card-footer'>
+                <button class='btn btn-primary' type='submit' (click)='onSubmit()'>Create Account</button>
+                <small *ngIf='errors' class='text-danger ml-4'>Fill in all the fields</small>
+            </div>
+        </div>
+    </div>
+</div>

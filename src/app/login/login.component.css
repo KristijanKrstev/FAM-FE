@@ -1,0 +1,33 @@
+aside{
+    margin: auto;
+    padding-top: 100px;
+}
+.card{
+    background-color: rgba(244, 0, 0, 0.5);
+    width: 450px;
+}
+
+.btn{
+    color: black;
+    font-weight: bold;
+}
+hr{
+    background-color: white;
+}
+h4{
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 25px;
+}
+.singUp{
+    color: white;
+    float: left;
+    font-weight: bold;
+    font: italic small-caps bold 16px/2 cursive;
+}
+.input-group-text{
+    color: black;
+}
+#passwordHelp{
+    color: white !important;
+    margin-left: 85px;
+}

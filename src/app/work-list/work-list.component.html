@@ -1,0 +1,38 @@
+<div class='row itemsBlock'>
+    <div class='col-md-4 col-sm-6 col-12' *ngFor='let work of works'>
+        <div>
+            <div class='image-flip'>
+                <div class='mainflip flip-0'>
+                    <div class='frontside'>
+                        <div class='card'>
+                            <div class='card-body text-center'>
+                                <img class='rounded-circle z-depth-2' alt='100x100' src='../../assets/images/workplace.jpg'
+                                    data-holder-rendered='true' />
+
+                                <h4 class='card-title'>Name : {{ work.name }} </h4>
+                                <a href='https://www.fiverr.com/share/qb8D02' class='btn btn-primary btn-sm'><i
+                                        class='fa fa-plus'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='backside'>
+                        <div class='card'>
+                            <div class='card-body text-center mt-4'>
+                                <a routerLink='/work/edit/{{ work.id }}'>
+                                    <h4 class='card-title'>Name : {{ work.name }} </h4>
+                                </a>
+                                <p class='card-text'>
+                                    Address : {{ work.address }}
+                                </p>
+                                <p class='card-text mt-4'>Phone : {{ work.number }} </p>
+                                <p class='card-text'>
+                                    Description : {{ work.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
